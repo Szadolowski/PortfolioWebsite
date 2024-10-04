@@ -20,6 +20,9 @@ export default {
         borderGradientServiceItem:
           "linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%)",
       },
+      boxShadow: {
+        shadow2: "0 16px 30px hsla(0, 0%, 0%, 0.25)",
+      },
     },
   },
   plugins: [],

@@ -2,6 +2,40 @@ import ArticleTitle from "./ArticleTitle";
 import Paragraph from "./Paragraph";
 import ServiceTitle from "./ServiceTitle";
 import ServiceItem from "./ServiceItam";
+
+interface serviceItemType {
+  title: string;
+  icon: string;
+  description: string;
+}
+
+const SERVICEITEMS: serviceItemType[] = [
+  {
+    title: "Frontend Development",
+    icon: "https://img.icons8.com/?size=100&id=PhZcqNXjSCWl&format=png&color=000000",
+    description:
+      " Creating responsive and engaging web applications that prioritize user experience while utilizing cutting-edge technologies like React.js and TypeScript.",
+  },
+  {
+    title: "Quality Assurance",
+    icon: "https://img.icons8.com/?size=100&id=121319&format=png&color=000000",
+    description:
+      "Conducting thorough testing to ensure high-quality code and a seamless user experience, delivering reliable applications every time.",
+  },
+  {
+    title: "API Integration",
+    icon: "https://img.icons8.com/?size=100&id=121319&format=png&color=000000",
+    description:
+      "Integrating third-party APIs to expand functionality and provide users with enhanced features, making applications more versatile.",
+  },
+  {
+    title: "Performance Optimization",
+    icon: "https://img.icons8.com/?size=100&id=VWymbD0s5esn&format=png&color=000000",
+    description:
+      "Continuously refining code to improve application speed and efficiency, ensuring optimal performance across all devices.",
+  },
+];
+
 export default function About() {
   return (
     <>
@@ -26,13 +60,12 @@ export default function About() {
         meaningful impact.
       </Paragraph>
       <ServiceTitle>What I`m Doing</ServiceTitle>
-      <ServiceItem
-        title="Frontend Development"
-        icon={"https://img.icons8.com/?size=100&id=PhZcqNXjSCWl&format=png&color=000000"}
-      >
-        Creating responsive and engaging web applications that prioritize user experience while
-        utilizing cutting-edge technologies like React.js and TypeScript.
-      </ServiceItem>
+
+      {SERVICEITEMS.map((item: serviceItemType, index: number) => (
+        <ServiceItem key={index} title={item.title} icon={item.icon}>
+          {item.description}
+        </ServiceItem>
+      ))}
     </>
   );
 }

@@ -4,12 +4,12 @@ export default function Header() {
       <img
         src="https://steamuserimages-a.akamaihd.net/ugc/1683745326201342430/DA2905C244383E8B74E46EFA266BC6BDB42CD899/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
         alt="ProfilIMG"
-        className="h-20 rounded-xl border-elementBorder border-2"
+        className="h-20 rounded-2xl border-elementBorder border-2"
       />
       <div className="space-y-3 py-2">
         <h1 className="font-semibold text-base">Rafał Curzydło</h1>
         <div className="bg-elementBackground rounded-lg py-1 px-3 text-xs text-center w-fit">
-          FrontEnd Developer
+          Frontend Developer
         </div>
       </div>
     </header>
